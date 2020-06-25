@@ -9,12 +9,14 @@
 <form method="POST">
     {% csrt_token %}
 
-    {{ form.as_p }}
+    {{ form }}
 
     <button type="submit">Salvar</button>
     {% if transacao %}
-    <a href="{% url 'url_delete' transacao.id%}">Remover</a>
+    <a href="{% url 'url_delete' transacao.id %}">Remover</a>
     {% endif %}
+
+
 </form>
 
 </body>
